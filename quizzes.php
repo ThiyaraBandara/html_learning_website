@@ -42,7 +42,6 @@ ini_set('display_errors', 1);
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="tutorials.php">Tutorials</a></li>
-                <li><a href="examples.php">Examples</a></li>
                 <li><a href="exercises.php">Exercises</a></li>
                 <li><a href="resources.php">Resources</a></li>
                 <li><a href="quizzes.php">Quizzes</a></li>

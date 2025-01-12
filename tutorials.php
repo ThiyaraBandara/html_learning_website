@@ -26,7 +26,6 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="tutorials.php">Tutorials</a></li>
-                <li><a href="examples.php">Examples</a></li>
                 <li><a href="exercises.php">Exercises</a></li>
                 <li><a href="resources.php">Resources</a></li>
                 <li><a href="quizzes.php">Quizzes</a></li>
@@ -44,14 +43,14 @@
         <h2>Lessons</h2>
         <ul>
             <li><a href="#lesson1" style="color: black;">Lesson 1: Introduction to HTML</a></li>
-            <li><a href="#lesson2" style="color: black;">Lesson 2: HTML Elements</a></li>
+            <li><a href="#lesson2" style="color: black;">Lesson 2: HTML Lists</a></li>
             <li><a href="#lesson3" style="color: black;">Lesson 3: Attributes</a></li>
             <li><a href="#lesson4" style="color: black;">Lesson 4: Lists</a></li>
             <li><a href="#lesson5" style="color: black;">Lesson 5: Images</a></li>
         </ul>
     </nav>
     <main>
-    <h2 id="lesson1">1. Introduction to HTML</h2>
+    <center><h2 id="lesson1">1. Introduction to HTML</h2></center>
     
     <h3>What is HTML?</h3>
     <p>
@@ -486,9 +485,247 @@
     </code></pre>
 </div>
 
-      
+<center><h2 id="lesson2">2. HTML Lists</h2></center>
+<p>HTML lists are used to group a set of related items in a structured format. They help in organizing content, making it easy to read and understand.</p>
+<p>There are two main types of HTML lists</p>
+<ul>
+    <li>Ordered Lists /Numbered List(&lt;ol&gt;)</li>
+    <li>Unordered Lists /Bulleted List ( &lt;ul&gt;)</li>
+</ul>
 
-</main>
+<h3>Ordered List &lt;ol&gt;</h3>
+<ul>
+<li>An ordered list is used when the sequence of items matters. Each item in an ordered list is numbered.</li>
+<li>These lists must begin with &lt;ol&gt; and followed by &lt;li&gt; list item tag.</li>
+</ul>
+
+<div class="code-box">
+    <pre><code>
+    &lt;html&gt;
+     &lt;head&gt;
+      &lt;title&gt; An Ordered List &lt;/title&gt;
+       &lt;body&gt;
+
+       &lt;ol&gt;
+           &lt;li&gt;Mango&lt;/li&gt;
+           &lt;li&gt;Apple&lt;/li&gt;
+           &lt;li&gt;Grapes&lt;/li&gt;
+       &lt;/ol&gt;
+        
+        &lt;/body&gt;
+      &lt;/head&gt;
+    &lt;/html&gt;
+    </code></pre>
+    <img src="html-lists.png" alt="ordered list" />
+</div>
+    
+      <h4>Atributes of &lt;ol&gt; tag</h4>
+    
+      <p><b>ol types</b></p>
+      &lt;ol type=""&gt;
+
+    <table>
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Type A</td>
+                <td>Capital letters eg:A,B,C,D,E...</td>
+            </tr>
+            <tr>
+                <td>Type a</td>
+                <td>Small Letters eg:a,b,c,d,e</td>
+            </tr>
+            <tr>
+                <td>Type I</td>
+                <td>Uppercase Roman Numbers eg:I,II,III,IV,V...</td>
+            </tr>
+            <tr>
+            <tr>
+                <td>Type i</td>
+                <td>Lowercase Roman Numbers eg:i,ii,iii,iv,v...</td>
+            </tr>
+            </tr>
+            <tr>
+                <td>Type 1</td>
+                <td>Numbers eg:1,2,3,4,5...</td>
+           </tr>
+        </tbody>
+</table>
+
+
+     <ul>
+         <li>START: This is used for the lists that need to start values other than 1.</li>
+     </ul>
+
+
+     <div class="code-box">
+    <pre><code>
+
+       &lt;ol type="i" start="3"&gt;
+           &lt;li&gt;cat&lt;/li&gt;
+           &lt;li&gt;dog&lt;/li&gt;
+           &lt;li&gt;rabbit&lt;/li&gt;
+           &lt;li&gt;bird&lt;/li&gt;
+           &lt;li&gt;deer&lt;/li&gt;
+       &lt;/ol&gt;
+       
+</div>
+
+<div class="code-box">
+<code>
+     <ol type="i" start="3">
+        <li>rabbit</li>
+        <li>bird</li>
+        <li>deer</li>
+     </ol>
+     </code>
+ </div>
+
+
+
+ <h3>Nested Ordered List</h3>
+ <p>If one ordered list contains one or more ordered lists... It is known as a Nested Order lists</p>
+ <div class="code-box">
+<code><pre>
+ 
+ &lt;ol&gt;
+        &lt;li&gt;Fruits&lt;/li&gt;
+           &lt;ol type=I&gt;
+              &lt;li&gt;Mango&lt;/li&gt;
+              &lt;li&gt;Apple&lt;/li&gt;
+              &lt;li&gt;Grapes&lt;/li&gt;
+
+        &lt;li&gt;Vegetables&lt;/li&gt;
+           &lt;ol type=I&gt;
+              &lt;li&gt;Carrot&lt;/li&gt;
+              &lt;li&gt;Brinjal&lt;/li&gt;
+              &lt;li&gt;Beans&lt;/li&gt;
+          
+          &lt;/ol&gt;
+&lt;/ol&gt;
+</code></pre>
+ </div>
+
+ <div class="code-box">
+ <code>
+
+ <ol>
+        <li>Fruits</li>
+           <ol type=I>
+              <li>Mango</li>
+              <li>Apple</li>
+              <li>Grapes</li>
+           </ol>
+
+        <li>Vegetables</li>
+           <ol type=I>
+              <li>Carrot</li>
+              <li>Brinjal</li>
+              <li>Beans</li>
+          </ol>
+</ol>
+
+ </code>
+ </div>
+ 
+ <h2>Unoedered List &lt;ul&gt; </h2>
+ <ul>
+    <li>Unordered lists are used to show list of items with bullets</li>
+    <li>They are also known as bulleted list</li>
+    <li>Unordered lists start with in &lt;ul&gt; and followed by &lt;li&gt;
+ </ul>
+
+Example 1
+ <div class="code-box">
+ <code><pre>
+
+ &lt;ul&gt;
+              &lt;li&gt;Cat&lt;/li&gt;
+              &lt;li&gt;dog&lt;/li&gt;
+              &lt;li&gt;cow&lt;/li&gt;
+          
+&lt;/ul&gt;
+</code></pre>
+ </div>
+
+ <div class="code-box">
+ <code>
+ <ul>
+              <li>cat</li>
+              <li>dog</li>
+              <li>cow</li>
+           </ol>
+</ul>
+</code>
+ </div>
+Example 2
+ <div class="code-box">
+ <code><pre>
+
+ &lt;ul type="square"&gt;
+              &lt;li&gt;Cat&lt;/li&gt;
+              &lt;li&gt;dog&lt;/li&gt;
+              &lt;li&gt;cow&lt;/li&gt;
+          
+&lt;/ul&gt;
+</code></pre>
+ </div>
+
+ <div class="code-box">
+ <code>
+ <ul type="square">
+              <li>cat</li>
+              <li>dog</li>
+              <li>cow</li>
+           </ol>
+</ul>
+</code>
+ </div>
+
+<h2>Definition Lists</h2>
+<ul>
+    <li>This is a list of terms and their explanations</li>
+    <li>It starts with &lt;dl&gt; tag and each definition list term starts with &lt;dt&gt; tag and each definition starts with &lt;dd&gt; tag.</li>
+</ul>
+<div class="code-box">
+ <code><pre>
+
+ &lt;dl&gt;
+              &lt;dt&gt;Coffee&lt;/dt&gt;
+              &lt;dd&gt;Black hot drink&lt;/dd&gt;
+              &lt;dt&gt;Milk&lt;/dt&gt;
+              &lt;dd&gt;White hot drink&lt;/dd&gt;
+          
+&lt;/dl&gt;
+</code></pre>
+ </div>
+
+<div class="code-box">
+ <code>
+ <dl>
+              <dt>Coffee</dt>
+              <dd>Black hot drink</dd>
+              <dt>Milk</dt>
+              <dd>White hot drink</dd>
+           
+</dl>
+</code>
+ </div>
+
+
+
+</ul> 
+
+
+
+
+
+ </main>
     <footer>
         <p>&copy; 2023 HTML Learning Hub</p>
     </footer>

@@ -26,7 +26,6 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="tutorials.php">Tutorials</a></li>
-                <li><a href="examples.php">Examples</a></li>
                 <li><a href="exercises.php">Exercises</a></li>
                 <li><a href="resources.php">Resources</a></li>
                 <li><a href="quizzes.php">Quizzes</a></li>
@@ -40,8 +39,8 @@
         
         <h2>Lesson Exercises</h2>
         
-        <h3><a href="#lesson1">Lesson 1: Introduction to HTML Exercises</a></h3>
-        <h3><a href="#lesson2">Lesson 2: More HTML Concepts Exercises</a></h3>
+        <h3><a href="#lesson1">Lesson 1: Introduction to HTML </a></h3>
+        <h3><a href="#lesson2">Lesson 2: HTML Lists</a></h3>
         <!-- Add more lessons as needed -->
 
         <?php
@@ -50,8 +49,14 @@
         "exercise1" => "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>My First Page</title>\n</head>\n<body>\n    <h1>Welcome to My First Page</h1>\n</body>\n</html>",
         "exercise2" => "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>My Favorite Fruits</title>\n</head>\n<body>\n    <h1>My Favorite Fruits</h1>\n    <ul>\n        <li>Apple</li>\n        <li>Banana</li>\n        <li>Cherry</li>\n    </ul>\n</body>\n</html>",
         "exercise3" => "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>My Paragraph</title>\n</head>\n<body>\n    <p>I love to eat <b>ice cream</b> in the summer!</p>\n</body>\n</html>",
-        "exercise4" => "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Link Example</title>\n</head>\n<body>\n    <a href=\"https://www.example.com\">Visit My Site</a>\n</body>\n</html>"
+        "exercise4" => "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Link Example</title>\n</head>\n<body>\n    <a href=\"https://www.example.com\">Visit My Site</a>\n</body>\n</html>",
+        "exercise0" => "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>HTML Lists Showcase</title>\n</head>\n<body>\n    <h1>HTML Lists Showcase</h1>\n\n    <h2>Ordered List of Favorite Fruits</h2>\n    <ol>\n        <li>Mango</li>\n        <li>Apple</li>\n        <li>Grapes</li>\n    </ol>\n\n    <h2>Nested Ordered List of Fruits and Vegetables</h2>\n    <ol>\n        <li>Fruits\n            <ol type=\"I\">\n                <li>Mango</li>\n                <li>Apple</li>\n                <li>Grapes</li>\n            </ol>\n        </li>\n        <li>Vegetables\n            <ol type=\"I\">\n                <li>Carrot</li>\n                <li>Brinjal</li>\n                <li>Beans</li>\n            </ol>\n        </li>\n    </ol>\n\n    <h2>Unordered List of Animals</h2>\n    <ul>\n        <li>Cat</li>\n        <li>Dog</li>\n        <li>Cow</li>\n    </ul>\n\n    <h2>Definition List of Beverages</h2>\n    <dl>\n        <dt>Coffee</dt>\n        <dd>Black hot drink</dd>\n        <dt>Milk</dt>\n        <dd>White hot drink</dd>\n    </dl>\n</body>\n</html>"
+        
     ];
+    
+   
+    
+
 
     // Check if a specific exercise was submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -61,6 +66,7 @@
     }
     ?>
 
+     <h3 id="lesson1">Lesson 1 - Introduction to HTML</h3>
     <form method="POST">
         <h3>Exercise 1: HTML Document Structure</h3>
         <label for="exercise1">Write a simple HTML document that includes a title and a heading:</label><br>
@@ -117,6 +123,34 @@
             <?php endif; ?>
     </form>
     
+
+
+    <h3 id="lesson2">Lesson 2 - HTML Lists</h3>
+
+    <form method="POST">
+        <h3>Lesson lists exercise</h3>
+        <label for="exercise0">Create an HTML document that showcases your understanding of different types of lists in HTML. Your document should include the following elements:
+
+                  An ordered list of your favorite fruits.
+                  A nested ordered list that categorizes fruits and vegetables.
+                  An unordered list of animals you like.
+                  A definition list for beverages.
+                  Display the HTML tags used for creating each list using the &lt;pre &gt; tag.
+                  <br>
+                  <b>Instructions</b>         <br>               
+                Create an HTML document with a title.<br>
+                Include the required lists as specified.<br>
+                Use the  &lt;pre &gt; tag to display the HTML code for each list.</label><br>
+        <textarea id="exercise0" name="answer" rows="4" cols="50"><?php echo isset($userAnswer) && $exerciseNumber == 0 ? htmlspecialchars($userAnswer) : ''; ?></textarea>
+        <input type="hidden" name="exerciseNumber" value="0">
+        <button type="submit">Show Answer</button>
+        <?php if (isset($exerciseNumber) && $exerciseNumber == 0): ?>
+            <div class="correct-answer">
+                <strong>Correct Answer:</strong>
+                <pre><?php echo htmlspecialchars($correctAnswer); ?></pre>
+            </div>
+        <?php endif; ?>
+    </form>
     </main>
     <footer>
         <p>&copy; 2023 HTML Learning Hub</p>
