@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>HTML Tutorials - Learning Hub</title>
 </head>
 <body>
@@ -20,20 +20,7 @@
     }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <header>
-        <h1>HTML Tutorials</h1>
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="tutorials.php">Tutorials</a></li>
-                <li><a href="exercises.php">Exercises</a></li>
-                <li><a href="resources.php">Resources</a></li>
-                <li><a href="quizzes.php">Quizzes</a></li>
-                <li><a href="about.php">About Us</a></li>
-                <li><a href="contact.php">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include 'header.php'; ?>
     <main>
     <h2>Welcome to the HTML Tutorial Series!</h2>
     <p>In this series, you will learn the fundamentals of HTML, empowering you to create structured and engaging web pages. Below, you can navigate to various lessons that cover essential HTML concepts.</p>
@@ -141,7 +128,7 @@
 
 
 <p>The HTML Document has two distinct parts as HEAD and BODY</p>
-<img src="html-structure.png" alt="HTML Structure Diagram" />
+<img src="assets/images/html-structure.png" alt="HTML Structure Diagram" />
 
 
 <h3>The &lt;head&gt;Tag</h3>
@@ -218,7 +205,7 @@
         &lt;/html&gt;
 
     </div>
-    <img src="html-headings.png" alt="HTML Structure Diagram" />
+    <img src="assets/images/html-headings.png" alt="HTML Structure Diagram" />
 
     <h3>The Paragraph &lt;P&gt;Tag</h3>
     <ul>
@@ -516,7 +503,7 @@
       &lt;/head&gt;
     &lt;/html&gt;
     </code></pre>
-    <img src="html-lists.png" alt="ordered list" />
+    <img src="assets/images/html-lists.png" alt="ordered list" />
 </div>
     
       <h4>Atributes of &lt;ol&gt; tag</h4>
@@ -726,9 +713,7 @@ Example 2
 
 
  </main>
-    <footer>
-        <p>&copy; 2023 HTML Learning Hub</p>
-    </footer>
+    <?php include 'footer.php' ?>
 </body>
 </html>
 

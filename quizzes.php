@@ -18,7 +18,7 @@ ini_set('display_errors', 1);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>HTML Quizzes - Learning Hub</title>
 
     
@@ -36,20 +36,7 @@ ini_set('display_errors', 1);
     }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <header>
-        <h1>HTML Quizzes</h1>
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="tutorials.php">Tutorials</a></li>
-                <li><a href="exercises.php">Exercises</a></li>
-                <li><a href="resources.php">Resources</a></li>
-                <li><a href="quizzes.php">Quizzes</a></li>
-                <li><a href="about.php">About Us</a></li>
-                <li><a href="contact.php">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php include 'header.php'; ?>
     <main>
         <h2>Test Your HTML Knowledge!</h2>
  
@@ -193,9 +180,7 @@ $conn->close();
 </style>
 
     </main>
-    <footer>
-        <p>&copy; 2023 HTML Learning Hub</p>
-    </footer>
+    <?php include 'footer.php' ?>
     <script src="script.js"></script>
 </body>
 </html>
