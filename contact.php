@@ -111,6 +111,38 @@
                     }, false)
                 })
         })()
+
+        // Contact form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (this.checkValidity()) {
+                const formData = new FormData(this);
+                
+                fetch('./ajax/contact-submission.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Clear form
+                        this.reset();
+                        this.classList.remove('was-validated');
+                        
+                        // Show success message
+                        alert(data.message);
+                    } else {
+                        // Show error message
+                        alert(data.message || 'An error occurred. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                });
+            }
+        });
     </script>
 </body>
 </html>
